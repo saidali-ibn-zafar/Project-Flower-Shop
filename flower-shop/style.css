@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Poppins', sans-serif  ;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1580px;
+    width: 100%;
+  }
+
+.inline-block{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+ul li{
+    padding-left: 25px;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.logo{
+    width: 220px;
+}
+
+/* beginning of number and working hours styles */
+.contactDetails{
+    text-align: center;
+}
+
+.contactDetails span{
+    color: grey;
+    font-size: 14px;
+}
+/* end of number and working hours styles */
+
+
+/* beginning of Instagram and Telegram icon styles */
+.socials li{
+    padding-left: 15px;
+}
+
+.socialIcons{
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 0;
+}
+
+.instaIcon{
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.telegramIcon{
+    background-image: url('./telegramGradient.png');
+}
+
+a{
+    text-decoration: none;
+}
+/* end of Instagram and Telegram icon styles */
+
+.searchAndMenuIcons li{
+    font-size: 28px;
+}
+
+.imgText{
+    width: 750px;
+}
+
+.textContainer{
+    width: 650px;
+    height: 400px;
+    transform: translateX(50px);
+    line-height: 1.6rem;
+}
+
