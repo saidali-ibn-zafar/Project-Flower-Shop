@@ -8,9 +8,30 @@
     font-family: 'Poppins', sans-serif  ;
 }
 
+.mainContainer{
+    background-image: url('./flowerImg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -2
+}
+
+.mainContainer::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+
 .container{
     margin: 0 auto;
-    max-width: 1580px;
+    max-width: 1500px;
     width: 100%;
   }
 
@@ -91,3 +112,27 @@ a{
     line-height: 1.6rem;
 }
 
+.contents{
+    display: flex;
+}
+
+.removedFlower{
+    width: 150%;
+    border-radius: 100px;
+}
+
+.btnsContainer .catalogBtn,
+.btnsContainer .galleryBtn {
+  width: 200px;
+  height: 50px;
+  border-radius: 12px;
+  background: none;
+  border: 2px solid rgb(228, 160, 171);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btnsContainer .catalogBtn:hover,
+.btnsContainer .galleryBtn:hover {
+  background-color: rgb(228, 160, 171);
+  cursor: pointer;
+}
