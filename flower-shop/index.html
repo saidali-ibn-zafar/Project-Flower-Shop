@@ -16,12 +16,12 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body style="background-color: #000">
+  <body>
     <div class="mainContainer">
 
       <nav class="inline-block container">
         <ul class="inline-block">
-          <li>Catalog</li>
+          <li id="catalogBtn">Catalog</li>
           <li>Hit of sales</li>
           <li>Gallery</li>
           <li>About us</li>
@@ -51,7 +51,8 @@
       </nav>
   
       <br />
-      <div class="container contents">
+      <!-- contents ================== -->
+        <div class="container contents" >
         <div>
           <img src="./flowersText.png" alt="text" class="imgText" />
   
@@ -66,8 +67,8 @@
 
             <br>
             <div class="inline-block btnsContainer">
-              <button class="catalogBtn">Open catalog</button>
-              <button class="galleryBtn">To gallery</button>
+              <button type="button" class="catalogBtn">Open catalog</button>
+              <button type="button" class="galleryBtn">To gallery</button>
             </div>
           </div>
           
@@ -76,11 +77,160 @@
         <div>
           <img src="./flowerRemoved.png" alt="flowerImg" class="removedFlower">
         </div>
+      </div> 
 
-      </div>
+        <!-- end of contents ================================================================= -->
+
+
+
+
+
+        <div class="centeredContainer hidden"  >
+          <div class="boxesContainer" style="background: transparent;">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+            <div class="box6"></div>
+            <div class="box5"></div>
+          </div>
+        </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- <div class="container bouquetCatalog"> -->
+        <!-- <div class="infoContainer"> -->
+          <!-- infos -->
+        <!-- </div> -->
+        
+        <!-- flower types  -->
+        <!-- <div class="inline-block">
+          <div class="flower1"></div>
+          <div class="flower2"></div>
+          <div class="flower3"></div>
+        </div>
+
+        <div class="inline-block">
+          <div class="flower4"></div>
+          <div class="flower5"></div>
+          <div class="flower6"></div>
+        </div>
+
+      </div> -->
+
+
+      <!-- <style>
+        .angry-grid {
+           display: grid; 
+        
+           grid-template-rows: 1fr 1fr 1fr 1fr;
+           grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+           
+           gap: 30px;
+           height: 800px;
+           
+        }
+          
+        #item-0 {
+        
+           background-color: #76CEBB; 
+           grid-row-start: 1;
+           grid-column-start: 1;
+        
+           grid-row-end: 5;
+           grid-column-end: 3;
+           
+        }
+        #item-1 {
+        
+           background-color: #E9DBC7; 
+           grid-row-start: 1;
+           grid-column-start: 3;
+        
+           grid-row-end: 3;
+           grid-column-end: 5;
+           
+        }
+        #item-2 {
+        
+           background-color: #BC57B9; 
+           grid-row-start: 3;
+           grid-column-start: 3;
+        
+           grid-row-end: 5;
+           grid-column-end: 5;
+           
+        }
+        #item-3 {
+        
+           background-color: #C5D97D; 
+           grid-row-start: 1;
+           grid-column-start: 5;
+        
+           grid-row-end: 3;
+           grid-column-end: 7;
+           
+        }
+        #item-4 {
+        
+           background-color: #DAA85A; 
+           grid-row-start: 3;
+           grid-column-start: 5;
+        
+           grid-row-end: 5;
+           grid-column-end: 7;
+           
+        }
+        #item-5 {
+        
+           background-color: #555BDD; 
+           grid-row-start: 1;
+           grid-column-start: 7;
+        
+           grid-row-end: 3;
+           grid-column-end: 9;
+           
+        }
+        #item-6 {
+        
+           background-color: #BB6898; 
+           grid-row-start: 3;
+           grid-column-start: 7;
+        
+           grid-row-end: 5;
+           grid-column-end: 9;
+           
+        }
+        </style>
+        
+        <div class="angry-grid container">
+          <div id="item-0">&nbsp;</div>
+          <div id="item-1">&nbsp;</div>
+          <div id="item-2">&nbsp;</div>
+          <div id="item-3">&nbsp;</div>
+          <div id="item-4">&nbsp;</div>
+          <div id="item-5">&nbsp;</div>
+          <div id="item-6">&nbsp;</div>
+        </div>
+        
+         -->
+         
 
     </div>
+
+     
     
-    
+    <script src="app.js"></script>
   </body>
 </html>
