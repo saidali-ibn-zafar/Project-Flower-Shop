@@ -30,12 +30,12 @@
         <img src="./logo.png" alt="Logo" class="logo" />
         <ul class="inline-block socials">
           <li>
-            <a href="#" class="instaIcon socialIcons"
+            <a href="https://instagram.com/" target="_blank" class="instaIcon socialIcons"
               ><i class="fa-brands fa-instagram"></i
             ></a>
           </li>
           <li>
-            <a href="#" class="telegramIcon socialIcons"
+            <a href="https://t.me/" target="_blank" class="telegramIcon socialIcons"
               ><i class="fa-brands fa-telegram"></i
             ></a>
           </li>
@@ -85,7 +85,7 @@
 
 
 
-        <div class="centeredContainer hidden"  >
+        <div class="centeredContainer hiddenCatalog hidden"  >
           <div class="boxesContainer" style="background: transparent;">
             <div class="box1"></div>
             <div class="box2"></div>
@@ -98,138 +98,101 @@
 
 
 
+        <!-- info section start -->
+    <div class="info container ">
+      <!-- info title -->
+      <div class="info-title">
+          <h3>Flower shop <span class="underline">Malliflow</span></h3>
+          <p><span class="color-1">Malliflow</span> is a loyal flower delivery friend You can order delivery or
+              personally choose a bouquet in our store. A huge selection of flowers and gifts. </p>
+      </div>
+      <!-- info title end -->
+
+      <!-- services info  -->
+      <div class="services">
+          <div class="service-items customer-service">
+              <img src="/images/fast.png" alt="customer-service-icon">
+              <h4>Customer service</h4>
+              <p>Photo and video report, SMS notification at each stage of the order</p>
+          </div>
+          <div class="service-items fast-delivery">
+              <img src="/images/star.png" alt="delivery-icon">
+              <h4>Fast delivery</h4>
+              <p>We will deliver it within an hour in the city or at another convenient time</p>
+          </div>
+          <div class="service-items quality-assurance">
+              <img src="/images/thir.png" alt="quality-assurance-icon">
+              <h4>Quality assurance</h4>
+              <p>Always fresh flowers from the best suppliers</p>
+          </div>
+      </div>
+      <div class="buttons">
+          <button id="prev">
+              <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <span class="circles active"></span>
+          <span class="circles"></span>
+          <span class="circles"></span>
+          <button id="next">
+              <i class="fa-solid fa-chevron-right"></i>
+          </button>
+      </div>
+      <!-- services info end -->
+  </div>
+  <!-- info section end --> 
 
 
 
 
 
+  <div class="centeredContainer2 container">
+    <div class="boxesContainer" >
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+      <div class="box6"></div>
+      <div class="box5"></div>
+    </div>
+  </div> 
 
 
+   <!-- discount card -->
+   <div class="discount-card container">
+    <div class="discount-info container">
+        <h3 class="discount-title">
+            <span id="discount-bold">Get 5% DISCOUNT</span> on your first purchase
+        </h3>
+        <div class="phone-input">
+            <input type="number" pattern="^+[0-9]*" class="input-disNumber" placeholder="Phone number">
+            <button class="dis-btn ">
+                Get a discount
+            </button>
 
-
-
-
-      <!-- <div class="container bouquetCatalog"> -->
-        <!-- <div class="infoContainer"> -->
-          <!-- infos -->
-        <!-- </div> -->
-        
-        <!-- flower types  -->
-        <!-- <div class="inline-block">
-          <div class="flower1"></div>
-          <div class="flower2"></div>
-          <div class="flower3"></div>
         </div>
-
-        <div class="inline-block">
-          <div class="flower4"></div>
-          <div class="flower5"></div>
-          <div class="flower6"></div>
+        <div class="discount-icons">
+            <!-- twitter icon -->
+            <i class="fa-brands fa-twitter" style="color: rgb(0, 115, 255)"></i>
+            <!-- facebook icon -->
+            <i class="fa-brands fa-facebook" style="color: rgb(0, 153, 255)"></i>
+            <!-- whatsapp icon -->
+            <i class="fa-brands fa-whatsapp" style="color: rgb(0, 255, 26)"></i>
+            <!-- messenger icon -->
+            <i class="fa-brands fa-instagram insta"
+                style="color:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);"></i>
         </div>
+        <p class="reminder">
+            *By clicking on the button, you consent to the processing of your personal data
+        </p>
+    </div>
 
-      </div> -->
+</div>
+<!-- discount card end --> 
 
-
-      <!-- <style>
-        .angry-grid {
-           display: grid; 
-        
-           grid-template-rows: 1fr 1fr 1fr 1fr;
-           grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-           
-           gap: 30px;
-           height: 800px;
-           
-        }
-          
-        #item-0 {
-        
-           background-color: #76CEBB; 
-           grid-row-start: 1;
-           grid-column-start: 1;
-        
-           grid-row-end: 5;
-           grid-column-end: 3;
-           
-        }
-        #item-1 {
-        
-           background-color: #E9DBC7; 
-           grid-row-start: 1;
-           grid-column-start: 3;
-        
-           grid-row-end: 3;
-           grid-column-end: 5;
-           
-        }
-        #item-2 {
-        
-           background-color: #BC57B9; 
-           grid-row-start: 3;
-           grid-column-start: 3;
-        
-           grid-row-end: 5;
-           grid-column-end: 5;
-           
-        }
-        #item-3 {
-        
-           background-color: #C5D97D; 
-           grid-row-start: 1;
-           grid-column-start: 5;
-        
-           grid-row-end: 3;
-           grid-column-end: 7;
-           
-        }
-        #item-4 {
-        
-           background-color: #DAA85A; 
-           grid-row-start: 3;
-           grid-column-start: 5;
-        
-           grid-row-end: 5;
-           grid-column-end: 7;
-           
-        }
-        #item-5 {
-        
-           background-color: #555BDD; 
-           grid-row-start: 1;
-           grid-column-start: 7;
-        
-           grid-row-end: 3;
-           grid-column-end: 9;
-           
-        }
-        #item-6 {
-        
-           background-color: #BB6898; 
-           grid-row-start: 3;
-           grid-column-start: 7;
-        
-           grid-row-end: 5;
-           grid-column-end: 9;
-           
-        }
-        </style>
-        
-        <div class="angry-grid container">
-          <div id="item-0">&nbsp;</div>
-          <div id="item-1">&nbsp;</div>
-          <div id="item-2">&nbsp;</div>
-          <div id="item-3">&nbsp;</div>
-          <div id="item-4">&nbsp;</div>
-          <div id="item-5">&nbsp;</div>
-          <div id="item-6">&nbsp;</div>
-        </div>
-        
-         -->
-         
 
     </div>
 
-     
+    <a href="#" class="top-link"> <i class="fas fa-arrow-up"></i> </a>
     
     <script src="app.js"></script>
   </body>

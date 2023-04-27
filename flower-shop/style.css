@@ -8,15 +8,19 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .mainContainer {
   background-image: url('./flowerImg.png');
   background-color: black;
-  min-height: 880px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;  
   overflow: hidden;
+  background-attachment: fixed;
 }
 
 .mainContainer::after{
@@ -210,16 +214,19 @@ a {
   transition: bottom 0.5s ease-in-out;
 }
 
-.centeredContainer::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  margin-top: 15vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.9;
+.centeredContainer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  position: relative;
+  padding: 0px;
+  transition: bottom 0.5s ease-in-out;
+  transform: translateY(-150px);
 }
+
 
 .boxesContainer {
   height: 60%;
@@ -320,3 +327,403 @@ a {
 .box6:hover {
   filter: blur(5px);
 }
+
+
+
+/* GOING TO TOP BTN STYLES  */
+a {
+  text-decoration: none;
+}
+
+.top-link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: #bc1888;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5rem;
+  color: #fff;
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  z-index: -100;
+}
+
+.top-link:hover{
+  background-color: #cc2366;
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* END OF GOING TO TOP BTN STYLES  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* info section */
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 85vh;
+  width: 85vw;
+  transform: scale(0.9);
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+/* .info::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+} */
+
+/* info-title */
+.info-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 2;
+
+}
+
+.info-title h3 {
+  font-size: 25px;
+  letter-spacing: 4px;
+
+}
+
+.info-title p {
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.5em;
+  height: 3em;
+  width: 70%;
+  margin-bottom: 40px;
+
+}
+
+
+.info-title .underline {
+  text-decoration: underline;
+}
+
+.info-title .color-1 {
+  color: rgb(248, 14, 232);
+}
+
+/* info-title end */
+
+/* info-services */
+.services {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* flex-direction: column; */
+  gap: 40px;
+  height: auto;
+  z-index: 2;
+
+
+}
+
+.service-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 300px;
+}
+
+.service-items img {
+  width: 150px;
+  margin-bottom: 15px
+}
+
+.services h4 {
+  font-size: 20px;
+  word-spacing: 5px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+
+}
+
+.services p {
+  line-height: 1.5em;
+  height: 3em;
+  width: 70%;
+  text-align: center;
+}
+
+.service-items:nth-child(2) img {
+  width: 250px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.service-items:nth-child(1) h4 {
+  margin-top: 19px;
+}
+
+
+
+@media(max-width:768px) {
+  .services {
+      height: 400px;
+      flex-direction: column;
+      overflow-y: hidden;
+      gap: 20px;
+
+  }
+
+
+  /* .service-items */
+  .service-items {
+      transform: translateY(207%);
+      transition: transform .6s ease-in-out;
+  }
+
+  .services p {
+      width: 100%;
+      height: 9em;
+  }
+
+  .service-items img {
+      width: 200px;
+      margin-bottom: 25px
+  }
+
+
+
+}
+
+
+/* info-services end */
+
+
+/* buttons start */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+  z-index: 2;
+
+}
+
+.buttons i {
+  cursor: pointer;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+/* circle active */
+.circles.active {
+  background-color: #fff;
+}
+
+@media (min-width:768px) {
+  .buttons {
+      display: none;
+  }
+}
+
+/* buttons start end */
+
+
+/* info section end */
+
+
+
+
+
+/* Discount card start */
+
+.discount-card {
+  width: 80%;
+  transform: translateY(-150px);
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-image: url('/images/discount-bg.jpg');
+  position: relative;
+  z-index: 2;
+  border-radius: 20px;
+
+}
+
+.discount-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(198, 56, 220, 0.3);
+  z-index: 1;
+  border-radius: 20px;
+
+}
+
+.discount-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px;
+  width: 80%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+
+}
+
+.discount-info .discount-title {
+  font-size: 20px;
+  color: rgba(248, 14, 232, 0.8);
+}
+
+span#discount-bold {
+  font-weight: bold;
+  color: rgb(248, 14, 232);
+  font-size: 25px;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+.phone-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 20px;
+}
+
+.input-disNumber[type='number'] {
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  outline: none;
+  border: 1px solid rgb(248, 14, 232);
+  background-color: rgba(248, 14, 232, 0.2);
+}
+
+.dis-btn {
+  background-color: rgb(233, 89, 223);
+  color: #000000;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  height: 40px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+
+}
+
+.discount-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  width: 100%;
+
+
+}
+
+.insta {
+  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.reminder {
+  color: rgb(129, 124, 128);
+  opacity: 0.5;
+}
+
+@media(min-width:768px) {
+  .discount-icons {
+      padding-left: 245px;
+  }
+
+  .reminder {
+      padding-left: 50px;
+  }
+
+}
+
+/* Discount card start end */
