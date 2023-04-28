@@ -3,29 +3,84 @@ const contents = document.querySelector(".contents");
 const info = document.querySelector(".info");
 const catalogUnhidden = document.querySelector(".centeredContainer2");
 const discountCard = document.querySelector(".discount-card");
+const buttons = document.querySelectorAll(".catalogBtn");
+const galleryButtons = document.querySelectorAll(".galleryBtn");
+const galleryContainer = document.querySelector(".galleryContainer");
+const galleryContainerUnhidden = document.querySelector(".galleryContainerUnhidden");
+const nav = document.querySelector("nav");
 
-document.getElementById("catalogBtn").addEventListener("click", function () {
-  if (catalogHidden.classList.contains("hidden")) {
-    contents.style.transform = "translateX(-100%)";
-    catalogHidden.classList.remove("hidden");
-    info.style.display = "none";
-    catalogUnhidden.style.display = "none";
-    discountCard.style.display = "none";
+function hideTheContents() {
+  contents.style.transform = "translateX(-100%)";
+  info.style.display = "none";
+  catalogUnhidden.style.display = "none";
+  galleryContainerUnhidden.style.display = "none";
+  discountCard.style.display = "none";
+  nav.style.transform = "translateY(-120px)";
+}
 
-    setTimeout(function () {
-      catalogHidden.style.bottom = "-10%";
-    }, 250);
-  } else {
-    catalogHidden.style.bottom = "-100%";
+function showTheContents() {
+  contents.style.transform = "translateX(0)";
+  info.style.display = "flex";
+  galleryContainerUnhidden.style.display = "flex";
+  catalogUnhidden.style.display = "flex";
+  discountCard.style.display = "flex";
+  nav.style.transform = "translateY(0)";
+}
 
-    setTimeout(function () {
-      catalogHidden.classList.add("hidden");
-      contents.style.transform = "translateX(0)";
-      info.style.display = "block";
-      catalogUnhidden.style.display = "flex";
-      discountCard.style.display = "flex";
-    }, 250);
-  }
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    if (catalogHidden.classList.contains("hidden")) {
+      catalogHidden.classList.remove("hidden");
+      hideTheContents();
+      setTimeout(function () {
+        catalogHidden.style.bottom = "10%";
+      }, 250);
+    } else {
+      catalogHidden.style.bottom = "-100%";
+      setTimeout(function () {
+        catalogHidden.classList.add("hidden");
+        showTheContents();
+      }, 250);
+    }
+  });
+});
+
+galleryButtons.forEach((galleryBtn) => {
+  galleryBtn.addEventListener("click", function () {
+    if (galleryContainer.classList.contains("hidden")) {
+      galleryContainer.classList.remove("hidden");
+      hideTheContents();
+      setTimeout(function () {
+        galleryContainer.style.bottom = "0";
+      }, 250);
+    } else {
+      galleryContainer.style.bottom = "-100%";
+      setTimeout(function () {
+        galleryContainer.classList.add("hidden");
+        showTheContents();
+      }, 250);
+    }
+  });
+});
+
+const goDowns = document.querySelectorAll(".goDown");
+
+goDowns.forEach((goDown) => {
+  goDown.addEventListener("click", function () {
+    if (!galleryContainer.classList.contains("hidden")) {
+      galleryContainer.style.bottom = "-100%";
+      setTimeout(function () {
+        galleryContainer.classList.add("hidden");
+        showTheContents();
+      }, 250);
+    } else {
+      catalogHidden.style.bottom = "-100%";
+      setTimeout(function () {
+        catalogHidden.classList.add("hidden");
+        showTheContents();
+      }, 250);
+    }
+  });
 });
 
 // go top button
@@ -34,7 +89,7 @@ window.addEventListener("scroll", function () {
   // console.log(window.pageYOffset);
   const scrollHeight = window.pageYOffset;
 
-  if (scrollHeight > 150) {
+  if (scrollHeight > 220) {
     topLink.classList.add("show-link");
   } else {
     topLink.classList.remove("show-link");

@@ -12,27 +12,31 @@ html {
   scroll-behavior: smooth;
 }
 
+nav {
+  transition: transform 0.5s ease-in-out;
+}
+
 .mainContainer {
-  background-image: url('./flowerImg.png');
+  background-image: url("./flowerImg.png");
   background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  z-index: 1;  
+  z-index: 1;
   overflow: hidden;
   background-attachment: fixed;
 }
 
-.mainContainer::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: black;
-    z-index: -1;
-    opacity: 0.8;
+.mainContainer::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  z-index: -1;
+  opacity: 0.8;
 }
 
 .container {
@@ -53,6 +57,11 @@ ul li {
   list-style-type: none;
   font-size: 20px;
   cursor: pointer;
+  transition: color 0.4s ease-in-out;
+}
+
+ul li:hover {
+  color: pink;
 }
 
 .logo {
@@ -143,7 +152,8 @@ a {
 .contents {
   display: flex;
   min-height: 800px;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  transform: scale(0.98);
 }
 
 .removedFlower {
@@ -165,6 +175,7 @@ a {
 .btnsContainer .galleryBtn:hover {
   background-color: rgb(228, 160, 171);
   cursor: pointer;
+  color: #000;
 }
 
 /* .bouquetCatalog{
@@ -193,8 +204,6 @@ a {
 }
  */
 
- 
-
 .hidden {
   display: none;
 }
@@ -207,7 +216,7 @@ a {
   height: 100%;
   background: transparent;
   position: fixed;
-  bottom: -100%; 
+  bottom: -100%;
   left: 0;
   right: 0;
   padding: 20px;
@@ -227,20 +236,19 @@ a {
   transform: translateY(-150px);
 }
 
-
 .boxesContainer {
-  height: 60%;
+  height: 90%;
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1.2fr;
-  gap: 10px 10px;
+  grid-template-rows: 1 1fr 1fr 1.2fr;
+  gap: 18px 18px;
   grid-auto-flow: row dense;
   grid-template-areas:
+    "goDown goDown goDown goDown"
     "box1 box2 box4 box6"
     "box1 box3 box5 box6";
   z-index: 1;
- 
 }
 
 .box1 {
@@ -328,8 +336,6 @@ a {
   filter: blur(5px);
 }
 
-
-
 /* GOING TO TOP BTN STYLES  */
 a {
   text-decoration: none;
@@ -352,7 +358,7 @@ a {
   z-index: -100;
 }
 
-.top-link:hover{
+.top-link:hover {
   background-color: #cc2366;
 }
 .show-link {
@@ -372,20 +378,6 @@ a {
   }
 }
 /* END OF GOING TO TOP BTN STYLES  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* info section */
 .info {
@@ -420,13 +412,11 @@ a {
   flex-direction: column;
   gap: 15px;
   z-index: 2;
-
 }
 
 .info-title h3 {
   font-size: 25px;
   letter-spacing: 4px;
-
 }
 
 .info-title p {
@@ -436,9 +426,7 @@ a {
   height: 3em;
   width: 70%;
   margin-bottom: 40px;
-
 }
-
 
 .info-title .underline {
   text-decoration: underline;
@@ -459,8 +447,6 @@ a {
   gap: 40px;
   height: auto;
   z-index: 2;
-
-
 }
 
 .service-items {
@@ -474,7 +460,7 @@ a {
 
 .service-items img {
   width: 150px;
-  margin-bottom: 15px
+  margin-bottom: 15px;
 }
 
 .services h4 {
@@ -483,7 +469,6 @@ a {
   text-align: center;
   letter-spacing: 3px;
   margin-bottom: 5px;
-
 }
 
 .services p {
@@ -503,41 +488,32 @@ a {
   margin-top: 19px;
 }
 
-
-
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .services {
-      height: 400px;
-      flex-direction: column;
-      overflow-y: hidden;
-      gap: 20px;
-
+    height: 400px;
+    flex-direction: column;
+    overflow-y: hidden;
+    gap: 20px;
   }
-
 
   /* .service-items */
   .service-items {
-      transform: translateY(207%);
-      transition: transform .6s ease-in-out;
+    transform: translateY(207%);
+    transition: transform 0.6s ease-in-out;
   }
 
   .services p {
-      width: 100%;
-      height: 9em;
+    width: 100%;
+    height: 9em;
   }
 
   .service-items img {
-      width: 200px;
-      margin-bottom: 25px
+    width: 200px;
+    margin-bottom: 25px;
   }
-
-
-
 }
 
-
 /* info-services end */
-
 
 /* buttons start */
 .buttons {
@@ -547,7 +523,6 @@ a {
   gap: 5px;
   margin-top: 20px;
   z-index: 2;
-
 }
 
 .buttons i {
@@ -569,20 +544,15 @@ a {
   background-color: #fff;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .buttons {
-      display: none;
+    display: none;
   }
 }
 
 /* buttons start end */
 
-
 /* info section end */
-
-
-
-
 
 /* Discount card start */
 
@@ -595,15 +565,14 @@ a {
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  background-image: url('/images/discount-bg.jpg');
+  background-image: url("/images/discount-bg.jpg");
   position: relative;
   z-index: 2;
   border-radius: 20px;
-
 }
 
 .discount-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -612,7 +581,6 @@ a {
   background-color: rgba(198, 56, 220, 0.3);
   z-index: 1;
   border-radius: 20px;
-
 }
 
 .discount-info {
@@ -627,7 +595,6 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   border-radius: 10px;
-
 }
 
 .discount-info .discount-title {
@@ -639,7 +606,6 @@ span#discount-bold {
   font-weight: bold;
   color: rgb(248, 14, 232);
   font-size: 25px;
-
 }
 
 input::-webkit-outer-spin-button,
@@ -647,10 +613,9 @@ input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
   margin: 0;
-  /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
   /* Firefox */
 }
@@ -663,7 +628,7 @@ input[type=number] {
   gap: 20px;
 }
 
-.input-disNumber[type='number'] {
+.input-disNumber[type="number"] {
   height: 40px;
   width: 200px;
   border-radius: 5px;
@@ -687,7 +652,6 @@ input[type=number] {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-
 }
 
 .discount-icons {
@@ -697,17 +661,21 @@ input[type=number] {
   gap: 10px;
   align-self: flex-start;
   width: 100%;
-
-
 }
 
 .insta {
-  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 
 .reminder {
@@ -715,15 +683,115 @@ input[type=number] {
   opacity: 0.5;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
   .discount-icons {
-      padding-left: 245px;
+    padding-left: 245px;
   }
 
   .reminder {
-      padding-left: 50px;
+    padding-left: 50px;
   }
-
 }
 
 /* Discount card start end */
+
+/* gallery  */
+.galleryContainer,
+.galleryContainerUnhidden {
+  height: 90%;
+  width: 70%;
+  display: grid;
+  margin-bottom: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 18px 18px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "goDown goDown goDown goDown"
+    "pic1 pic2 pic4 pic4"
+    "pic1 pic3 pic4 pic4"
+    "pic5 pic5 pic6 pic7";
+  transition: transform 0.5s ease-in-out;
+}
+
+.goDown {
+  grid-area: goDown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.pic1 {
+  grid-area: pic1;
+  background-image: url("./pic1.png");
+}
+
+.pic2 {
+  grid-area: pic2;
+  background-image: url("./pic2.png");
+}
+
+.pic3 {
+  grid-area: pic3;
+  background-image: url("./pic3.png");
+}
+
+.pic4 {
+  grid-area: pic4;
+  background-image: url("./pic4.png");
+}
+
+.pic5 {
+  grid-area: pic5;
+  background-image: url("./pic5.png");
+}
+
+.pic6 {
+  grid-area: pic6;
+  background-image: url("./pic6.png");
+}
+
+.pic7 {
+  grid-area: pic7;
+  background-image: url("./pic7.png");
+}
+
+.galleryContainer div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: fill;
+  border-radius: 25px;
+}
+
+.galleryContainer {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.fa-chevron-down {
+  font-size: 38px;
+}
+
+.galleryContainerUnhidden div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: fill;
+  border-radius: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.galleryContainerUnhidden div:hover {
+  transform: scale(0.96);
+}
+
+.galleryContainerUnhidden .pic1 {
+  height: 450px;
+}
