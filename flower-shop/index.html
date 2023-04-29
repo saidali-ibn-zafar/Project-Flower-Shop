@@ -88,20 +88,6 @@
 
       <!-- end of contents ================================================================= -->
 
-      <div class="mainContents"></div>
-
-      <div class="centeredContainer hiddenCatalog hidden">
-        <div class="boxesContainer">
-          <div class="goDown"><a href="#"><i class="fa-solid fa-chevron-down"></i></a></div>
-          <div class="box1"></div>
-          <div class="box2"></div>
-          <div class="box3"></div>
-          <div class="box4"></div>
-          <div class="box6"></div>
-          <div class="box5"></div>
-        </div>
-      </div>
-
       <!-- info section start -->
       <div class="info container">
         <!-- info title -->
@@ -165,7 +151,7 @@
         </div>
       </div>
 
-      <br><br>
+      <br /><br />
       <!-- discount card -->
       <div class="discount-card container">
         <div class="discount-info container">
@@ -215,35 +201,183 @@
       </div>
       <!-- discount card end -->
 
-      <!-- gallery  -->
-      <div class="galleryContainerUnhidden container ">
-        <div class="pic1"></div>
-        <div class="pic2"></div>
-        <div class="pic3"></div>
-        <div class="pic4"></div>
-        <div class="pic5"></div>
-        <div class="pic6"></div>
-        <div class="pic7"></div>
-      </div>
-
-      <!-- gallery  -->
-      <div class="galleryContainer container hidden">
-        <div class="goDown"><a href="#"><i class="fa-solid fa-chevron-down"></i></a></div>
-        <div class="pic1"></div>
-        <div class="pic2"></div>
-        <div class="pic3"></div>
-        <div class="pic4"></div>
-        <div class="pic5"></div>
-        <div class="pic6"></div>
-        <div class="pic7"></div>
-      </div>
-
-
       <br />
+
+      <!-- bouquet catalog start -->
+      <div class="bouquet">
+        <h2 class="bouquet-title">Bouquet catalog</h2>
+        <div class="filter">
+          <ul class="list">
+            <li class="categories">stock</li>
+            <li class="categories">Designer bouquets</li>
+            <li class="categories">Mono bouquets</li>
+            <li class="categories">Bouquets of dried flowers</li>
+            <li class="categories">Wedding bouquets</li>
+            <li class="categories">Bouquets in boxes</li>
+            <li class="categories">Sweet bouquets</li>
+            <li class="categories">Bouquets of soap flowers</li>
+            <li class="categories">Boxes of soap flowers</li>
+          </ul>
+          <div class="price-controller">
+            <h3>Price</h3>
+            <div class="price-range">
+              <div class="price-range">
+                <div class="range-slider">
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="20"
+                    class="range"
+                    id="range1"
+                  />
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="range"
+                    id="range3"
+                  />
+                </div>
+                <div class="range-display">
+                  <span class="range-value" id="range1-display"></span>
+                  <span class="range-value" id="range3-display"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-dropdown">
+            <div class="dropdown scheme-dr">
+              <button class="dropdown-button">
+                <span>Color Scheme</span>
+                <span class="btnArr"
+                  ><i class="fa-solid fa-chevron-right"></i
+                ></span>
+              </button>
+
+              <div class="dropdown-content">
+                <label class="radio-button" for="fl-1">Roses</label>
+                <input
+                  type="radio"
+                  name="color-scheme"
+                  id="fl-1"
+                  value="roses"
+                />
+
+                <label class="radio-button" for="fl-2">Peonies</label>
+                <input
+                  type="radio"
+                  name="color-scheme"
+                  id="fl-2"
+                  value="peonies"
+                />
+
+                <label class="radio-button" for="fl-3">Daises</label>
+                <input
+                  type="radio"
+                  name="color-scheme"
+                  id="fl-3"
+                  value="daises"
+                />
+
+                <label class="radio-button" for="fl-4">Dried Flowers</label>
+                <input
+                  type="radio"
+                  name="color-scheme"
+                  id="fl-4"
+                  value="dried-flowers"
+                />
+
+                <label class="radio-button" for="fl-5">Hydrangeas</label>
+                <input
+                  type="radio"
+                  name="color-scheme"
+                  id="fl-5"
+                  value="hydrangeas"
+                />
+
+                <label class="radio-button" for="fl-6">Wild Flowers</label>
+                <input
+                  type="radio"
+                  name="color-scheme"
+                  id="fl-6"
+                  value="wild-flowers"
+                />
+              </div>
+            </div>
+
+            <div class="dropdown size-dr">
+              <button class="dropdown-button">
+                <span>Sizes</span>
+                <span class="btnArr"
+                  ><i class="fa-solid fa-chevron-right"></i
+                ></span>
+              </button>
+
+              <div class="dropdown-content">
+                <label class="radio-button" for="size1">S</label>
+                <input type="radio" name="size" id="size1" value="S" />
+                <label class="radio-button" for="size2">M</label>
+                <input type="radio" name="size" id="size2" value="M" />
+                <label class="radio-button" for="size3">L</label
+                ><input type="radio" name="size" id="size3" value="L" />
+                <label class="radio-button" for="size4">XL</label
+                ><input type="radio" name="size" id="size4" value="XL" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="items-bouquet">
+          <div class="bouquet-cards"></div>
+          <!-- <div class="bouquet-btns">
+              <button id="prev" class="prev-bouquet">
+                  <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <span class="circles active"></span>
+              <span class="circles"></span>
+              <span class="circles"></span>
+              <button id="next" class=" next-bouquet">
+                  <i class="fa-solid fa-chevron-right"></i>
+              </button>
+          </div> -->
+        </div>
+      </div>
+      <!-- bouquet catalog end  -->
+
+      <!-- hidden gallery -->
+      <div class="galleryContainer container hidden">
+        <div class="goDown">
+          <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+        <div class="pic1"></div>
+        <div class="pic2"></div>
+        <div class="pic3"></div>
+        <div class="pic4"></div>
+        <div class="pic5"></div>
+        <div class="pic6"></div>
+        <div class="pic7"></div>
+      </div>
+
+      <!-- hidden catalog  -->
+      <div class="centeredContainer hiddenCatalog hidden">
+        <div class="boxesContainer">
+          <div class="goDown">
+            <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
+          </div>
+          <div class="box1"></div>
+          <div class="box2"></div>
+          <div class="box3"></div>
+          <div class="box4"></div>
+          <div class="box6"></div>
+          <div class="box5"></div>
+        </div>
+      </div>
     </div>
 
     <a href="#" class="top-link"> <i class="fas fa-arrow-up"></i> </a>
 
+    
     <script src="app.js"></script>
   </body>
 </html>
