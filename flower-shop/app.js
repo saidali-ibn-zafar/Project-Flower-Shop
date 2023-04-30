@@ -10,26 +10,24 @@ const mainContainer = document.querySelector(".mainContainer");
 const nav = document.querySelector("nav");
 const goDowns = document.querySelectorAll(".goDown");
 const topLink = document.querySelector(".top-link");
-const bouquetContainer = document.querySelector('.bouquet');
+const bouquetContainer = document.querySelector(".bouquet");
 
 // hide contents function
 function hideTheContents() {
-  contents.style.transform = "translateX(-100%)";
   info.style.display = "none";
   catalogUnhidden.style.display = "none";
   discountCard.style.display = "none";
-  bouquetContainer.style.display = 'none';
-  nav.style.transform = "translateY(-120px)";
+  bouquetContainer.style.display = "none";
+  document.querySelector("body").style.overflow = "hidden";
 }
 
 // show contents function
 function showTheContents() {
-  contents.style.transform = "translateX(0)";
   info.style.display = "flex";
   catalogUnhidden.style.display = "flex";
   discountCard.style.display = "flex";
-  bouquetContainer.style.display = 'flex';
-  nav.style.transform = "translateY(0)";
+  bouquetContainer.style.display = "flex";
+  document.querySelector("body").style.overflow = "visible";
 }
 
 buttons.forEach((button) => {
@@ -37,6 +35,9 @@ buttons.forEach((button) => {
     if (catalogHidden.classList.contains("hidden")) {
       catalogHidden.classList.remove("hidden");
       hideTheContents();
+      contents.style.transform = "translateX(-100%)";
+      nav.style.transform = "translateY(-120px)";
+
       setTimeout(function () {
         catalogHidden.style.bottom = "10%";
       }, 250);
@@ -44,6 +45,8 @@ buttons.forEach((button) => {
       catalogHidden.style.bottom = "-100%";
       setTimeout(function () {
         catalogHidden.classList.add("hidden");
+        contents.style.transform = "translateX(0)";
+        nav.style.transform = "translateY(0)";
         showTheContents();
       }, 250);
     }
@@ -55,6 +58,8 @@ galleryButtons.forEach((galleryBtn) => {
     if (galleryContainer.classList.contains("hidden")) {
       galleryContainer.classList.remove("hidden");
       hideTheContents();
+      contents.style.transform = "translateX(-100%)";
+      nav.style.transform = "translateY(-120px)";
       setTimeout(function () {
         galleryContainer.style.bottom = "0";
       }, 250);
@@ -63,6 +68,8 @@ galleryButtons.forEach((galleryBtn) => {
       setTimeout(function () {
         galleryContainer.classList.add("hidden");
         showTheContents();
+        contents.style.transform = "translateX(0)";
+        nav.style.transform = "translateY(0)";
       }, 250);
     }
   });
@@ -75,12 +82,16 @@ goDowns.forEach((goDown) => {
       setTimeout(function () {
         galleryContainer.classList.add("hidden");
         showTheContents();
+        contents.style.transform = "translateX(0)";
+        nav.style.transform = "translateY(0)";
       }, 250);
     } else {
       catalogHidden.style.bottom = "-100%";
       setTimeout(function () {
         catalogHidden.classList.add("hidden");
         showTheContents();
+        contents.style.transform = "translateX(0)";
+        nav.style.transform = "translateY(0)";
       }, 250);
     }
   });
@@ -91,7 +102,7 @@ window.addEventListener("scroll", function () {
   // console.log(window.pageYOffset);
   const scrollHeight = window.pageYOffset;
 
-  if (scrollHeight > 220) {
+  if (scrollHeight > 600) {
     topLink.classList.add("show-link");
   } else {
     topLink.classList.remove("show-link");
@@ -104,26 +115,6 @@ topLink.addEventListener("click", function () {
     top: 0,
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const circles = document.querySelectorAll(".circles");
 const services = document.querySelector(".services");
@@ -214,7 +205,7 @@ const menu = [
   },
   {
     id: 2,
-    name: "Bouquet 'Sun' ",
+    name: "Bouquet 'Happiness' ",
     category: "peonies",
     image: "./images/bouquet/bouquet-2.jpg",
     description: "Designer bouquet",
@@ -223,7 +214,7 @@ const menu = [
   },
   {
     id: 3,
-    name: "Bouquet 'Sun' ",
+    name: "Bouquet 'Joy' ",
     category: "peonies",
     image: "./images/bouquet/bouquet-3.jpg",
     description: "Designer bouquet",
@@ -232,7 +223,7 @@ const menu = [
   },
   {
     id: 4,
-    name: "Bouquet 'Sun' ",
+    name: "Bouquet 'Beauty' ",
     category: "peonies",
     image: "./images/bouquet/bouquet-4.jpg",
     description: "Mono bouquets",
@@ -241,7 +232,7 @@ const menu = [
   },
   {
     id: 5,
-    name: "Bouquet 'Sun' ",
+    name: "Bouquet 'Tickling' ",
     category: "peonies",
     image: "./images/bouquet/bouquet-5.jpg",
     description: "Mono bouquets",
@@ -250,7 +241,7 @@ const menu = [
   },
   {
     id: 6,
-    name: "Bouquet 'Sun' ",
+    name: "Bouquet 'Smile' ",
     category: "peonies",
     image: "./images/bouquet/bouquet-6.jpg",
     description: "Mono bouquets",
@@ -259,7 +250,7 @@ const menu = [
   },
   {
     id: 7,
-    name: "Bouquet 'Sun' ",
+    name: "Bouquet 'Funny' ",
     category: "peonies",
     image: "./images/bouquet/bouquet-7.jpg",
     description: "Bouquets of dried flowers",
@@ -268,7 +259,7 @@ const menu = [
   },
   {
     id: 8,
-    name: "Bouquet 'Sun' ",
+    name: "Bouquet 'Durk' ",
     category: "peonies",
     image: "./images/bouquet/bouquet-8.jpg",
     description: "Bouquets of dried flowers",
@@ -277,7 +268,7 @@ const menu = [
   },
   {
     id: 9,
-    name: "Bouquet 'Sun' ",
+    name: "Bouquet 'Success' ",
     category: "peonies",
     image: "./images/bouquet/bouquet-9.jpg",
     description: "Bouquets of dried flowers",
@@ -286,7 +277,7 @@ const menu = [
   },
   {
     id: 10,
-    name: "Bouquet 'Sun' ",
+    name: "Sunburst Peonies",
     category: "peonies",
     image: "./images/bouquet/bouquet-10.jpg",
     description: "Wedding bouquets",
@@ -295,7 +286,7 @@ const menu = [
   },
   {
     id: 11,
-    name: "Bouquet 'Sun' ",
+    name: "Golden Peony Delight",
     category: "peonies",
     image: "../images/bouquet/bouquet-11.jpg",
     description: "Wedding bouquets",
@@ -304,7 +295,7 @@ const menu = [
   },
   {
     id: 12,
-    name: "Bouquet 'Sun' ",
+    name: "Petite Peony Pizzazz",
     category: "peonies",
     image: "./images/bouquet/bouquet-12.jpg",
     description: "Wedding bouquets",
@@ -313,7 +304,7 @@ const menu = [
   },
   {
     id: 13,
-    name: "Bouquet 'Sun' ",
+    name: "Boxed Peony Bloom",
     category: "peonies",
     image: "./images/bouquet/bouquet-13.jpg",
     description: "Bouquets in boxes",
@@ -322,7 +313,7 @@ const menu = [
   },
   {
     id: 14,
-    name: "Bouquet 'Sun' ",
+    name: "Luxe Peony Elegance",
     category: "peonies",
     image: "./images/bouquet/bouquet-14.jpg",
     description: "Bouquets in boxes",
@@ -331,7 +322,7 @@ const menu = [
   },
   {
     id: 15,
-    name: "Bouquet 'Sun' ",
+    name: "Garden Peony Charm",
     category: "peonies",
     image: "./images/bouquet/bouquet-15.jpg",
     description: "Bouquets in boxes",
@@ -340,7 +331,7 @@ const menu = [
   },
   {
     id: 16,
-    name: "Bouquet 'Sun' ",
+    name: "Sweet Peony Surprise",
     category: "peonies",
     image: "./images/bouquet/bouquet-16.jpg",
     description: "Sweet bouquets",
@@ -349,7 +340,7 @@ const menu = [
   },
   {
     id: 17,
-    name: "Bouquet 'Sun' ",
+    name: "Peony Paradise",
     category: "peonies",
     image: "./images/bouquet/bouquet-17.jpg",
     description: "Sweet bouquets",
@@ -358,7 +349,7 @@ const menu = [
   },
   {
     id: 18,
-    name: "Bouquet 'Sun' ",
+    name: "Soap Peony Sensation",
     category: "peonies",
     image: "./images/bouquet/bouquet-18.jpg",
     description: "Sweet bouquets",
@@ -367,7 +358,8 @@ const menu = [
   },
   {
     id: 19,
-    name: "Bouquet 'Sun' ",
+    name: "Peony Radiance",
+
     category: "peonies",
     image: "./images/bouquet/bouquet-19.jpg",
     description: "Sweet bouquets",
@@ -376,7 +368,7 @@ const menu = [
   },
   {
     id: 20,
-    name: "Bouquet 'Sun' ",
+    name: "Peony Perfection",
     category: "peonies",
     image: "./images/bouquet/bouquet-20.jpg",
     description: "Bouquets of soap flowers",
@@ -385,7 +377,7 @@ const menu = [
   },
   {
     id: 21,
-    name: "Bouquet 'Sun' ",
+    name: "Peony Passion",
     category: "peonies",
     image: "./images/bouquet/bouquet-21.jpg",
     description: "Bouquets of soap flowers",
@@ -394,7 +386,7 @@ const menu = [
   },
   {
     id: 22,
-    name: "Bouquet 'Sun' ",
+    name: "Peony Delight",
     category: "peonies",
     image: "./images/bouquet/bouquet-22.jpg",
     description: "Bouquets of soap flowers",
@@ -412,7 +404,7 @@ const menu = [
   },
   {
     id: 24,
-    name: "Bouquet 'Sun' ",
+    name: "Peony Enchantment",
     category: "peonies",
     image: "./images/bouquet/bouquet-24.jpg",
     description: "Boxes of soap flowers",
@@ -421,7 +413,7 @@ const menu = [
   },
   {
     id: 25,
-    name: "Bouquet 'Sun' ",
+    name: "Peony Splendor",
     category: "peonies",
     image: "./images/bouquet/bouquet-25.jpg",
     description: "Boxes of soap flowers",
@@ -430,7 +422,7 @@ const menu = [
   },
   {
     id: 26,
-    name: "Bouquet 'Sun' ",
+    name: "Peony Magic",
     category: "peonies",
     image: "./images/bouquet/bouquet-10.jpg",
     description: "Boxes of soap flowers",
@@ -439,7 +431,7 @@ const menu = [
   },
   {
     id: 27,
-    name: "Bouquet 'Sun' ",
+    name: "Peony Bliss",
     category: "peonies",
     image: "./images/bouquet/bouquet-21.jpg",
     description: "Wedding bouquets",
@@ -462,7 +454,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="line"></div>
                 <div class="card-price">
-                    <h3>${item.cost} <span class="currency">USD</span></h3>
+                    <h3 class="costText">${item.cost} <span class="currency">USD</span></h3>
                     <div class="cart-icon">
                         <i class="fa-solid fa-heart  "></i>
                         <p class="like-counter">0</p>
@@ -474,6 +466,118 @@ window.addEventListener("DOMContentLoaded", function () {
 
   displayMenu = displayMenu.join("");
   bouquetCards.innerHTML += displayMenu;
+
+  const cartt = document.querySelectorAll(".bouquet-card");
+
+  const selectedItem = document.querySelector(".selected-item");
+  const selectedItemImg = selectedItem.querySelector("img");
+  const selectedItemCost = document.querySelector(".costOfProduct");
+  const orderDiv = document.querySelector(".orderDiv");
+  const goUpIcon = document.querySelector(".fa-chevron-up");
+  const footer = document.querySelector("footer");
+
+  cartt.forEach((cart) => {
+    cart.addEventListener("click", () => {
+      selectedItem.classList.add("show");
+      selectedItemImg.src = cart.querySelector("img").src;
+      selectedItemCost.textContent =
+        cart.querySelector(".costText").textContent;
+      if (orderDiv.style.display === "none") {
+        orderDiv.style.display = "grid";
+        footer.style.display = "none";
+        setTimeout(function () {
+          goUpIcon.style.visibility = "visible";
+        }, 250);
+        document.querySelectorAll(".moveLeft").forEach((move) => {
+          move.style.transform = "translate(-150%, 0)";
+        });
+        setTimeout(function () {
+          contents.style.display = "none";
+          info.style.display = "none";
+          catalogUnhidden.style.display = "none";
+          discountCard.style.display = "none";
+          bouquetContainer.style.display = "none";
+          nav.style.display = "none";
+        }, 350);
+        setTimeout(function () {
+          orderDiv.style.transform = "translate(-50%, 0%)";
+          goUpIcon.style.transform = "translate(0, -70px)";
+        }, 250);
+      } else {
+        orderDiv.style.top = "-100%";
+        goUpIcon.style.visibility = "hidden";
+        setTimeout(function () {
+          orderDiv.style.display = "none";
+          showTheContents();
+        }, 250);
+      }
+      document
+        .querySelector(".btnOrder")
+        .addEventListener("click", function () {
+          orderDiv.style.transform = "translate(-50%, -150%)";
+          goUpIcon.style.visibility = "hidden";
+          setTimeout(function () {
+            orderDiv.style.display = "none";
+            document.querySelector(".payment-container").style.transform =
+              "translate(-50%, 10% )";
+            mainContainer.style.minHeight = "150vh";
+            document.querySelector(".orderImg").querySelector("img").src =
+              cart.querySelector("img").src;
+            document
+              .querySelector(".orderData")
+              .querySelector("h4").textContent =
+              cart.querySelector(".card-name").textContent;
+
+            document
+              .querySelector(".orderData")
+              .querySelector("h3")
+              .querySelector("span").textContent =
+              cart.querySelector(".costText").textContent;
+          }, 250);
+        });
+    });
+  });
+
+  const closeBtn = document.querySelector(".close-btn");
+
+  closeBtn.addEventListener("click", function () {
+    document.querySelector(".payment-container").style.transform =
+      "translate(100%, 10% )";
+    mainContainer.style.minHeight = "100vh";
+    setTimeout(function () {
+      orderDiv.style.display = "none";
+      footer.style.display = "block";
+      contents.style.display = "flex";
+      nav.style.display = "flex";
+      showTheContents();
+
+      setTimeout(function () {
+        document.querySelectorAll(".moveLeft").forEach((move) => {
+          move.style.transform = "translate(0)";
+        });
+      }, 200);
+    }, 300);
+  });
+
+  goUpIcon.addEventListener("click", function () {
+    orderDiv.style.transform = "translate(-50%, -150%)";
+    goUpIcon.style.transform = "translate(0, -3000px)";
+    setTimeout(function () {
+      goUpIcon.style.visibility = "hidden";
+    }, 250);
+
+    setTimeout(function () {
+      orderDiv.style.display = "none";
+      contents.style.display = "flex";
+      nav.style.display = "flex";
+      showTheContents();
+      setTimeout(function () {
+        document.querySelectorAll(".moveLeft").forEach((move) => {
+          move.style.transform = "translate(0)";
+        });
+      }, 200);
+    }, 300);
+  });
 
   const hearts = document.querySelectorAll(".fa-heart");
   hearts.forEach(function (heart) {
@@ -564,12 +668,3 @@ categories.addEventListener("click", function (e) {
     }
   }
 });
-
-// prevBqt.addEventListener("click", function () {
-
-// });
-
-// nextBqt.addEventListener("click", function () {
-
-// });
-

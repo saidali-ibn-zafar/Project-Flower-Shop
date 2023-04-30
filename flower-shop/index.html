@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Flower Shop</title>
+    <!-- favicon  -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <!-- style css  -->
     <link rel="stylesheet" href="style.css" />
     <!-- font awesome  -->
@@ -18,14 +20,14 @@
   </head>
   <body>
     <div class="mainContainer">
-      <nav class="inline-block container">
+      <nav class="inline-block container moveLeft">
         <ul class="inline-block">
           <li class="catalogBtn">Catalog</li>
           <li class="galleryBtn">Gallery</li>
           <li>About us</li>
           <li>Contact</li>
         </ul>
-        <img src="./logo.png" alt="Logo" class="logo" />
+        <img src="./images/logo.png" alt="Logo" class="logo" />
         <ul class="inline-block socials">
           <li>
             <a
@@ -56,9 +58,9 @@
 
       <br />
       <!-- contents ================== -->
-      <div class="container contents">
+      <div class="container contents moveLeft">
         <div>
-          <img src="./flowersText.png" alt="text" class="imgText" />
+          <img src="./images/flowersText.png" alt="text" class="imgText" />
 
           <div class="textContainer">
             <p>
@@ -79,7 +81,7 @@
 
         <div>
           <img
-            src="./flowerRemoved.png"
+            src="./images/flowerRemoved.png"
             alt="flowerImg"
             class="removedFlower"
           />
@@ -89,7 +91,7 @@
       <!-- end of contents ================================================================= -->
 
       <!-- info section start -->
-      <div class="info container">
+      <div class="info container moveLeft">
         <!-- info title -->
         <div class="info-title">
           <h3>Flower shop <span class="underline">Malliflow</span></h3>
@@ -140,7 +142,8 @@
       </div>
       <!-- info section end -->
 
-      <div class="centeredContainer2 container">
+      <div class="centeredContainer2 container moveLeft">
+        <h2 class="catalogTitle">Catalog</h2>
         <div class="boxesContainer">
           <div class="box1"></div>
           <div class="box2"></div>
@@ -153,7 +156,7 @@
 
       <br /><br />
       <!-- discount card -->
-      <div class="discount-card container">
+      <div class="discount-card container moveLeft">
         <div class="discount-info container">
           <h3 class="discount-title">
             <span id="discount-bold">Get 5% DISCOUNT</span> on your first
@@ -201,10 +204,10 @@
       </div>
       <!-- discount card end -->
 
-      <br />
+      <br><br>
 
       <!-- bouquet catalog start -->
-      <div class="bouquet">
+      <div class="bouquet moveLeft">
         <h2 class="bouquet-title">Bouquet catalog</h2>
         <div class="filter">
           <ul class="list">
@@ -330,23 +333,15 @@
         </div>
         <div class="items-bouquet">
           <div class="bouquet-cards"></div>
-          <!-- <div class="bouquet-btns">
-              <button id="prev" class="prev-bouquet">
-                  <i class="fa-solid fa-chevron-left"></i>
-              </button>
-              <span class="circles active"></span>
-              <span class="circles"></span>
-              <span class="circles"></span>
-              <button id="next" class=" next-bouquet">
-                  <i class="fa-solid fa-chevron-right"></i>
-              </button>
-          </div> -->
         </div>
       </div>
+      <br><br><br><br><br><br>
       <!-- bouquet catalog end  -->
 
       <!-- hidden gallery -->
       <div class="galleryContainer container hidden">
+        <h2 class="galleryTitle">Gallery</h2>
+
         <div class="goDown">
           <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
         </div>
@@ -361,6 +356,7 @@
 
       <!-- hidden catalog  -->
       <div class="centeredContainer hiddenCatalog hidden">
+        <h2 class="catalogTitle">Catalog</h2>
         <div class="boxesContainer">
           <div class="goDown">
             <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
@@ -373,9 +369,219 @@
           <div class="box5"></div>
         </div>
       </div>
+
+       <!-- POP UP Hidden default -->
+       <div class="orderContents">
+        <div><i class="fa-solid fa-chevron-up"></i></div>
+
+        <div class="orderDiv container" style="display: none;" >
+          <div class="picture selected-item">
+            <img src="" alt="">
+          </div>
+          <div id="text"class="info1" >
+            <p>Bouquet of beautiful roses and dianthus</p>
+            <h3><i class="fa-regular fa-heart"></i> Add to favourites</h3>
+            <br>
+            <h2>Price: &nbsp; <span class="costOfProduct"></span></h2>
+            <br>
+            <button type="button" class="btnOrder">To order</button>
+            <br> <br>
+            <p><span class="boldText">Free</span> delivery from 3000 UAH</p>
+          </div>
+    
+          <div class="info2">
+            <p><i class="fa-solid fa-camera"></i>&nbsp; Photo before sending</p>
+            <p><i class="fa-solid fa-truck"></i>&nbsp; Free delivery from 3000 UAH</p>
+            <p><i class="fa-solid fa-gift"></i>&nbsp; Gift when ordering from 3000 UAH </p>
+            <br>
+            <p><i class="fa-solid fa-phone"></i>&nbsp; Order by phone:</p>
+            <h3><a href="tel:+48666081271">+48-666-081-271</a></h3>
+          </div>
+        </div>
+       </div>
+     
+
+
+
+
+
+
+       <!-- Payment page start -->
+    <div class="payment-container">
+      <div class="order-created-info">
+          <!-- close icon -->
+          <div class="close-btn">
+              <i class="fa-solid fa-xmark"></i>
+          </div>
+          <!-- <h3 class="order-created">Your order No<span id="order-number">######</span> dated <span id="order-date">29/04/2023</span>
+              <span id="order-time">26:88</span> has been successfully created</h3>
+          -->
+          <div class="payment-card-add">
+              <div class="online-payments">
+                  <div class="apple-pay">
+                      <button class="apple-pay-button"><i class="fab fa-apple-pay"></i></button>
+                  </div>
+                  <div class=" apple-pay google-pay">
+                      <button class="apple-pay-button"><i class="fa-brands fa-google-pay"></i></button>
+                  </div>
+              </div>
+
+
+              <div class="seperator">
+                  <div class="hor-line"></div>
+                  <p>or pay using credit card</p>
+                  <div class="hor-line"></div>
+              </div>
+
+              <div class="by-card">
+                  <h2 class="by-card-title">By card</h2>
+                  <div class="input-container">
+                      <label class="label-input" for="name-field">Card holder full name</label>
+                      <!-- input full name -->
+                      <input type="text" id="name-field" title="input title" class="input-field" name="input-name"
+                          placeholder="Enter your full name">
+                  </div>
+                  <div class="input-container">
+                    <label class="email-input" for="email-field">Email</label>
+                    <!-- input email -->
+                    <input type="email" id="email-field" title="input email" class="input-field" name="input-email"
+                        placeholder="Enter your email">
+                </div>
+                  <div class="input-container">
+                      <label for="number-field" class="label-input">Card Number</label>
+                      <!-- input card number -->
+                      <input type="number" id="number-field" pattern="/^\d{16}$/" title="input card number"
+                          class="input-field" name="input-number" placeholder="0000 0000 0000 0000">
+                  </div>
+                  <div class="input-container">
+                      <label for="info-field" class="label-input">Expiry Date/CVV</label>
+                      <!-- input card info -->
+                      <div class="input-number">
+                          <input type="number" id="expiration-date-field" title="input expiration date"
+                              class="input-field" name="expiration-date" pattern="^(0[1-9]|1[0-2])\/\d{2}$"
+                              placeholder="02/23">
+
+                          <input type="number" maxlength="3" id="cvv-field" title="input cvv" class="input-field"
+                              pattern="^\d{3}$" name="cvv" placeholder="###">
+
+                      </div>
+                      <div class="to-pay">
+                          <!-- button to pay -->
+                          <button class="pay-btn">Pay</button>
+                      </div>
+
+                      <div class="consent-and-icon">
+                          <div class="consent">*by clicking on the button you consent to the processing of personal
+                              data </div>
+                          <div class="pop-icons">
+                              <!-- apple pay icon -->
+                              <i class="fa-brands fa-apple-pay"></i>
+                              <!-- visa icon -->
+                              <i class="fa-brands fa-cc-visa"></i>
+                              <!-- google pay icon -->
+                              <i class="fa-brands fa-google-pay"></i>
+                              <!-- master card icon -->
+                              <i class="fa-brands fa-cc-mastercard"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="your-order">
+              <h3 id="title">Your order</h3>
+              <div class="final-checkout-cart">
+                  <div class="orderImg">
+                    <img src=""  alt="">
+                    </div>
+                  <div class="orderData">
+                    <h4></h4>
+                    <p>Bouquet of beautiful roses </p>
+                    <p>and dianthus.</p>
+                    <br>
+                    <h3>Price: &nbsp; <span class="ordersCost"></span></h3>
+
+                  </div>
+                  
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+     
+      
+      </div>
+      <!-- Payment page end -->
+
+
+
+    <!-- footer start -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links">
+            <div class="logo-link">
+                <img src="./images/logo.png" alt="">
+                <!-- telegram instagram -->
+                <div class="med">
+                    <i class="fa-brands fa-telegram" style="color: lightseagreen"></i>
+                    <!-- instagram -->
+                    <i class="fa-brands fa-instagram insta"
+                        style="color:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);"></i>
+                </div>
+                <div class="timework">
+                    <h4>+(48)-666-081-271</h4>
+                    <p>daily from 08:00-20:00</p>
+                </div>
+                <div class="address">ul.Jana Matejki 21/23</div>
+            </div>
+            <div class="information">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Delivery and pickup</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#">Quality assurance</a></li>
+                </ul>
+            </div>
+            <div class="catalog-link">
+                <h3>Catalog</h3>
+                <ul>
+                    <li><a href="#">Delivery and pickup</a></li>
+                    <li><a href="#">Bouquets</a></li>
+                    <li><a href="#">Flowerpots</a></li>
+                    <li><a href="#">Roses</a></li>
+                    <li><a href="#">Bears</a></li>
+                    <li><a href="#">Ballons</a></li>
+                    <li><a href="#">Flowerpots in boxes</a></li>
+                </ul>
+            </div>
+            <div class="newsteller">
+                <h3>Subscribe to our newsletter</h3>
+                <input type="email" placeholder="Your email">
+                <button>Subscribe</button>
+                <p>*by clicking on the button, you consent to the processing of personal data</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- footer end -->
+
+    </footer>
+   
+
+
+
+
     </div>
 
     <a href="#" class="top-link"> <i class="fas fa-arrow-up"></i> </a>
+
+
+
+
+   
+    
+
 
     
     <script src="app.js"></script>
