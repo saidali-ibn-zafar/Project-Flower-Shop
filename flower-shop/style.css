@@ -578,7 +578,7 @@ a {
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  background-image: url("/images/discount-bg.jpg");
+  background-image: url("./images/discount-bg.jpg");
   position: relative;
   z-index: 2;
   border-radius: 20px;
