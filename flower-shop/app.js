@@ -288,7 +288,7 @@ const menu = [
     id: 11,
     name: "Golden Peony Delight",
     category: "peonies",
-    image: "../images/bouquet/bouquet-11.jpg",
+    image: "./images/bouquet/bouquet-11.jpg",
     description: "Wedding bouquets",
     cost: "88",
     size: "XL",

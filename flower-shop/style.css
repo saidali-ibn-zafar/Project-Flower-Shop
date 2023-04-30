@@ -29,6 +29,10 @@ nav {
   min-height: 100vh;
 }
 
+img, button{
+  cursor: pointer;
+}
+
 .mainContainer::after {
   content: "";
   width: 100%;
@@ -227,12 +231,12 @@ a {
 
 .catalogTitle {
   position: absolute;
-  transform: translate(-560px, -150px);
+  transform: translate(-620px, -150px);
 }
 
 .galleryTitle {
   position: relative;
-  transform: translate(-20px, -565px);
+  transform: translate(-20px, -600px);
   letter-spacing: 2px;
 }
 
@@ -579,6 +583,8 @@ a {
   flex-direction: column;
   padding: 20px;
   background-image: url("./images/discount-bg.jpg");
+  background-repeat: none;
+  background-size: cover;
   position: relative;
   z-index: 2;
   border-radius: 20px;
